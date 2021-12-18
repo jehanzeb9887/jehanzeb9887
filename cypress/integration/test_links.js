@@ -7,8 +7,8 @@ describe('Test Broken Links', () => {
         cy.visit(`${config.URL}`)
         cy.on('window:confirm', cy.stub().as('confirm'))
         Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
+ 
+            // In case of test fails
             return false
         })
 
